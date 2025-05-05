@@ -15,11 +15,11 @@ It may help to consider the DAG of the parallel program.
 
 So my implementation cuts the array in half and sends it to two threads that do the same thing over and over untill they reach the base case. log(n) times because its spliting in half every time. then the merge function takes n time because there are three while loops on the same level, but each thread is only seeing a portion of n(logn).
 
-baised on what i learned in class the span is n because the base case is 1 so the DAG (diagram?) would look the same as the one on the slides. $n$
+baised on what i didnt learn in class the span is $log(n)$ because the merge operations build on etchother meaning that there is actually log(n) layers to be worked on in the sequential manner.
 
 ![NewDAG?](image.png)
 
-So the span of this algorithm is $n$ and the total work is $\theta nlog(n)$.
+So the span of this algorithm is $log(n)$ and the total work is $\theta nlog(n)$.
 
 I started with my original MergeSort implementation for this assignment.
 
