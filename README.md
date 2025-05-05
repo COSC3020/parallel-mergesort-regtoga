@@ -15,7 +15,7 @@ It may help to consider the DAG of the parallel program.
 
 So my implementation cuts the array in half and sends it to two threads that do the same thing over and over untill they reach the base case. log(n) times because its spliting in half every time. then the merge function takes n time because there are three while loops on the same level, but each thread is only seeing a portion of n(logn).
 
-baised on what i didnt learn in class the span is $log(n)$ because the merge operations build on etchother meaning that there is actually log(n) layers to be worked on in the sequential manner.
+baised on what i didnt learn in class the span is $log(n)$ because the merge operations build on each other, resulting in log(n) sequential layers. and no i really am not shure :happyface:
 
 ![NewDAG?](image.png)
 
